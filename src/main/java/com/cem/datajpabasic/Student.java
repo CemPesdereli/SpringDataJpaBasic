@@ -1,16 +1,37 @@
 package com.cem.datajpabasic;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "T_STUDENT")
 public class Student {
 
+    @Id
+    @GeneratedValue()
     private Integer id;
 
+    @Column(
+            name = "c_fname",
+            length = 20
+    )
     private String firstname;
 
     private String lastname;
 
+    @Column(unique = true)
     private String email;
 
     private int age;
+
+    @Column(
+            updatable = false
+    )
+    private String some_column;
+
+
+    public Student() {
+    }
 
     public Student(String firstname, String lastname, String email, int age) {
         this.firstname = firstname;
