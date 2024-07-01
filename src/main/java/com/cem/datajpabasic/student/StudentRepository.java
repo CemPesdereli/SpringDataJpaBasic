@@ -1,4 +1,4 @@
-package com.cem.datajpabasic;
+package com.cem.datajpabasic.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,5 +1,6 @@
-package com.cem.datajpabasic;
+package com.cem.datajpabasic.studentprofile;
 
+import com.cem.datajpabasic.student.Student;
 import jakarta.persistence.*;
 
 @Entity

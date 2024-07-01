@@ -1,6 +1,9 @@
-package com.cem.datajpabasic;
+package com.cem.datajpabasic.student;
 
 
+import com.cem.datajpabasic.school.School;
+import com.cem.datajpabasic.studentprofile.StudentProfile;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -32,6 +35,7 @@ public class Student {
 
     @ManyToOne()
     @JoinColumn(name= "school_id")
+    @JsonBackReference
     private School school;
 
 
